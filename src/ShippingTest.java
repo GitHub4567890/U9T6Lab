@@ -16,7 +16,7 @@ public class ShippingTest {
     System.out.println("---- TESTING PART C ----");
     ShippingItem newItem = new InsuredShippingItem(10, 50);
     System.out.println(newItem.getCost());
-    
+
     // ---- TESTING PART D ----
     System.out.println("---- TESTING PART D ----");
     ArrayList<ShippingItem> itemList = new ArrayList<>();
@@ -34,6 +34,22 @@ public class ShippingTest {
 
 
     // add your code here
+    for (ShippingItem a : itemList) {
+      if (a instanceof InsuredShippingItem) {
+        ((InsuredShippingItem) a).addMoreInsurance(30);
+      }
+      totalCost += a.getCost();
+    }
+
+//    for (ShippingItem item : itemList) {
+//      totalCost += item.getCost();
+//    }
+//
+//    for (InsuredShippingItem item : itemList) {
+//      item.addMoreInsurance(30);
+//      totalCost += item.getCost();
+//    }
+
 
 
 
